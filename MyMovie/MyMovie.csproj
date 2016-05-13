@@ -114,8 +114,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="css\MyMovie.css" />
     <Content Include="Global.asax" />
-    <Content Include="css\common.css" />
     <Content Include="image\b_20151027161013312.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
