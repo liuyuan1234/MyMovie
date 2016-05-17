@@ -12,17 +12,19 @@
 .logo
 {
     
-    width:100%;
+    width:1366px;
     height:100px;
-    text-indent:100px;
     line-height:100px;
     font-size:40px;
     font-family:"Microsoft Yahei";
     font-weight:bold;
     background-color:#003e3e;
     color:#fff;
-    position:relative;
  }
+ .piclogo
+ {
+    float:left;
+    margin: 15px 10px 0px 60px; }
 .search
 {
     font-size:16px;
@@ -30,24 +32,42 @@
     line-height:80px;
     color:#fff;
 }
+
 .box
 {
-    width:300px;
-    height:25px;
+    width:280px;
+    height:30px;
     font-size:15px;
     color:#ccc;
     }
 .button
 {
-    width:40px;
-    height:25px;
-    margin-left:5px;}    
+    width:50px;
+    height:30px;
+    margin-left:5px;
+    font-size:15px}
+.login
+{
+    position:absolute;top:60px;right:100px;
+    font-size:15px;
+    }
+.signin , .signup
+{
+    color:#fff;
+    margin-right:10px;}
+.signin ,.signup:hover
+{
+    color:#ff2d2d;
+    font-size:20px;}
+#mainbody
+{
+    height:100%;
+    width:1366px}    
 .left
 {
     background-color:#fff;
     width:20%;
     float:left;
-   
     }  
     .line 
     {
@@ -67,13 +87,62 @@
       background-color:#005ab5;
       color:#fff;
       }
-#mainbody
-{
-    
-    background:#d0d0d0;
-    width:1366px;
-    height:100%;
-    }
+
 .right
 {
-    width:80%;}
+    width:80%;
+    float:right;
+    background-color:#f0f0f0;
+    }
+.newmovie
+{
+
+    margin-left:65px;}
+.nmtitle
+{
+    position:relative;
+    
+}
+.nmtitle span
+{
+    position:absolute; top:20px;
+    font-size:25px;
+    color:#8e8e8e;}
+    .nmtitle a
+    {
+        position:absolute;top: 35px;right:50px;
+        font-size:10px;
+        color:#8e8e8e;}
+        .nmtitle a:hover
+        {
+            color:#ff5151;
+            }
+.moviebox
+{
+    height:320px;
+    position:relative;
+    margin:10px 20px;
+    float:left;
+    border:2px solid #cfc0c0;
+    padding:5px;
+    background-color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    }
+.movietitle
+{
+    position:absolute;
+    margin-left:3px;
+    color:#000;/**/
+    }
+    .movietitle a  /*为什么在.movietitle里面定义颜色没用*/
+    {
+        color:#000;}
+        .movietitle a:hover
+        {
+            color:#ff8040;}
+.moviesorce
+{
+    position:absolute;
+    margin-left:170px;
+    color:#4f4f4f;}

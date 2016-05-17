@@ -116,7 +116,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\MyMovie.css" />
     <Content Include="Global.asax" />
-    <Content Include="image\b_20151027161013312.jpg" />
+    <Content Include="image\chaoti.jpg" />
+    <Content Include="image\dashengguilai.jpg" />
+    <Content Include="image\fenqizhe.jpg" />
+    <Content Include="image\jieyouxi3.jpg" />
+    <Content Include="image\newmovie.png" />
+    <Content Include="image\shentanxialuoke.jpg" />
+    <Content Include="image\tangrenjietanan.jpg" />
+    <Content Include="image\xialuotefannao.jpg" />
+    <Content Include="image\xunlongjue.jpg" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\zhuoyaoji.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
