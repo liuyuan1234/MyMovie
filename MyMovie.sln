@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovie", "MyMovie\MyMovie.csproj", "{FEBD481F-E799-46AD-93AC-9A2E92E4E033}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovie.Model", "MyMovie.Model\MyMovie.Model.csproj", "{F06AEC15-E897-478D-87B5-DE2B1AD9E281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovie.BLL", "MyMovie.BLL\MyMovie.BLL.csproj", "{022FEBCD-8580-4A4B-B168-DB18E026D086}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{FEBD481F-E799-46AD-93AC-9A2E92E4E033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEBD481F-E799-46AD-93AC-9A2E92E4E033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEBD481F-E799-46AD-93AC-9A2E92E4E033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F06AEC15-E897-478D-87B5-DE2B1AD9E281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F06AEC15-E897-478D-87B5-DE2B1AD9E281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F06AEC15-E897-478D-87B5-DE2B1AD9E281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F06AEC15-E897-478D-87B5-DE2B1AD9E281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022FEBCD-8580-4A4B-B168-DB18E026D086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022FEBCD-8580-4A4B-B168-DB18E026D086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022FEBCD-8580-4A4B-B168-DB18E026D086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022FEBCD-8580-4A4B-B168-DB18E026D086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,8 +22,14 @@
                 <button type="button" class="button">搜索</button>
                 </div>
                 <div class="login">
+                @if (ViewBag.username == "")
+                {
                 <a href="#" class="signin">登陆</a>
-                <a href="#" class="signup">注册</a>
+                <a href="#" class="signup">注册</a>}
+                else {
+                    <span>@ViewBag.username</span>
+                    <a href="#" >退出</a>
+                }
                 </div>
             
         </div>
@@ -32,7 +38,7 @@
 
                 <div class="left" >
                     <ul>
-                        <li><a href="#">首页</a></li>
+                        <li><a href="#" class="now">首页</a></li>
                         <li><a href="#">喜剧</a></li>
                         <li><a href="#">动作</a></li>
                         <li><a href="#">爱情</a></li>
