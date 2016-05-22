@@ -55,7 +55,7 @@
 {
     color:#fff;
     margin-right:10px;}
-.signin ,.signup:hover
+.signin:hover ,.signup:hover
 {
     color:#ff2d2d;
     font-size:20px;}
@@ -87,7 +87,11 @@
       background-color:#005ab5;
       color:#fff;
       }
-
+.left .now
+{
+     background-color:#005ab5;
+      color:#fff;
+}
 .right
 {
     width:80%;
