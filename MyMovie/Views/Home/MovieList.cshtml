@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "MovieList";
+}
+<div>
+    <ul>
+        @foreach (var m in ViewBag.MovieList)
+{
+        <li><a href="/Home/MovieDetail?id=@m.ID" target="_blank"><img src="@m.MovieImg" /> @m.Name </a></li>
+}
+    </ul>
+</div>
