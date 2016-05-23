@@ -46,7 +46,7 @@ namespace MyMovie.Controllers
         /// 注册
         /// </summary>
         /// <returns></returns>
-        public ActionResult SighUp()
+        public ActionResult SignUp()
         {
             return View();
         }

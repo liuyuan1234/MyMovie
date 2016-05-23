@@ -1,6 +1,6 @@
 ﻿*
 {
-    margin:0;
+    margin:0 auto;
     padding:0;
     list-style:none;
     text-decoration:none;
@@ -58,7 +58,7 @@
 .signin:hover ,.signup:hover
 {
     color:#ff2d2d;
-    font-size:20px;}
+}
 #mainbody
 {
     height:100%;
@@ -106,7 +106,6 @@
 .nmtitle
 {
     position:relative;
-    background-color:rgb(174, 193, 197)
     
 }
 .nmtitle span
@@ -127,7 +126,6 @@
 {   
     margin-top:10px;
     position:relative;
-    background-color:rgb(174, 193, 197)
     
 }
 .hmtitle span

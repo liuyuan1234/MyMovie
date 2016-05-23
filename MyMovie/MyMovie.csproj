@@ -115,6 +115,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\MyMovie.css" />
+    <Content Include="css\SignIn.css" />
+    <Content Include="css\SignUp.css" />
     <Content Include="Global.asax" />
     <Content Include="image\chaoti.jpg" />
     <Content Include="image\dashengguilai.jpg" />
@@ -127,6 +129,8 @@
     <Content Include="image\gongfuxiongmao3.jpg" />
     <Content Include="image\hotmovie.png" />
     <Content Include="image\jieyouxi3.jpg" />
+    <Content Include="image\login.jpg" />
+    <Content Include="image\logo2.png" />
     <Content Include="image\meirenyu.jpg" />
     <Content Include="image\newmovie.png" />
     <Content Include="image\shentanxialuoke.jpg" />
@@ -161,7 +165,7 @@
     <Content Include="Views\Home\SignIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\SighUp.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\MovieList.cshtml" />
