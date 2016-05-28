@@ -11,7 +11,7 @@
     }
 .logo
 {
-    
+    position:relative;
     width:1366px;
     height:100px;
     line-height:100px;
@@ -28,8 +28,7 @@
 .search
 {
     font-size:16px;
-    position:absolute;top:30px;right:300px;
-    line-height:80px;
+    position:relative;top:-100px;right:-700px;
     color:#fff;
 }
 
@@ -48,13 +47,17 @@
     font-size:15px}
 .login
 {
-    position:absolute;top:60px;right:100px;
+    position:relative;top:-200px;right:-1200px;
     font-size:15px;
     }
 .signin , .signup
 {
     color:#fff;
     margin-right:10px;}
+        .SignOut
+    {
+        color:#fff;
+        }
 .signin:hover ,.signup:hover
 {
     color:#ff2d2d;

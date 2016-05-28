@@ -1,6 +1,30 @@
 ﻿@{
     ViewBag.Title = "MovieDetail";
 }
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+    <title>电影详情</title>
+    <link href="/css/MovieDetail.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div class="top">
+    <div class="background">
+        <img src="../../image/logo.png" / alt="加载失败"/ class="piclogo"/>
+        <span class="title">在线影院系统</span>
+        <div class="search"><input type="text" name="search" value="请输入影片名称" class="box"/>
+                <button type="button" class="button">搜索</button>
+        </div>
+    
+    </div>
+
+
+</div>
 
 <h2>片名：@ViewBag.movieModel.Name  </h2>
 <p>介绍：@ViewBag.movieModel.Introduce </p>
+</body>
+
+</html>
+
