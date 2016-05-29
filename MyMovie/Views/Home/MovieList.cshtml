@@ -1,6 +1,174 @@
 ﻿@{
     ViewBag.Title = "MovieList";
 }
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>在线影院</title>
+    <link href="/css/MovieList.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">
+                <img src="../../image/logo.png" / alt="加载失败" class="piclogo"/>
+                在线影院系统
+                <div class="search"><input type="text" name="search" value="请输入影片名称" class="box"/>
+                <button type="button" class="button">搜索</button>
+                </div>
+                <div class="login">
+                @if (ViewBag.username == "")
+                {
+                <a href="/Home/SignIn" class="signin">登陆</a>
+                <a href="/Home/SignUp" class="signup">注册</a>
+                    }
+                else {
+                    <div class="SignOut">
+                    <span>@ViewBag.username</span>
+                    <a href="#" class="signout">退出</a>
+                    </div>
+                }
+            </div>
+            </div>
+        </div>
+        <div id="mainbody"><!--好像没什么用><-->
+            <div class="line"></div>
+
+                <div class="left" >
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">喜剧</a></li>
+                        <li><a href="#"class="now">动作</a></li>
+                        <li><a href="#">爱情</a></li>
+                        <li><a href="#">武侠</a></li>
+                        <li><a href="#">战争</a></li>
+                        <li><a href="#">科幻</a></li>
+                        <li><a href="#">恐怖</a></li>
+                        <li><a href="#">犯罪</a></li>
+                        <li><a href="#">惊悚</a></li>
+                        <li><a href="#">剧情</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>   
+                <div class="right">
+                    
+                    <div class="movie"> 
+                        <ul>
+                            <li><div class="moviebox">
+                                    <a href="#" title="寻龙诀">
+                                        <img src="../../image/xunlongjue.jpg" / alt="寻龙诀"/></a>
+                                    <div class="movietitle"><a href="#">寻龙诀</a></div>
+                                    <div class="moviesorce">7.7</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="超体">
+                                        <img src="../../image/chaoti.jpg" / alt="超体"/></a>
+                                    <div class="movietitle"><a href="#">超体</a></div>
+                                    <div class="moviesorce">7.0</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="大圣归来">
+                                        <img src="../../image/dashengguilai.jpg" / alt="大圣归来"/></a>
+                                    <div class="movietitle"><a href="#">大圣归来</a></div>
+                                    <div class="moviesorce">8.3</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="分歧者2绝地反击">
+                                        <img src="../../image/fenqizhe2juedingfanji.jpg" / alt="分歧者2绝地反击"/></a>
+                                    <div class="movietitle"><a href="#">分歧者2绝地反击</a></div>
+                                    <div class="moviesorce">5.8</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="饥饿游戏3嘲笑鸟（上）">
+                                        <img src="../../image/jieyouxi3.jpg" / alt="饥饿游戏3嘲笑鸟（上）"/></a>
+                                    <div class="movietitle"><a href="#">饥饿游戏3嘲笑鸟（上）</a></div>
+                                    <div class="moviesorce">5.8</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="神探夏洛克">
+                                        <img src="../../image/shentanxialuoke.jpg" / alt="神探夏洛克"/></a>
+                                    <div class="movietitle"><a href="#">神探夏洛克</a></div>
+                                    <div class="moviesorce">6.9</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="唐人街探案">
+                                        <img src="../../image/tangrenjietanan.jpg" / alt="唐人街探案"></a>
+                                    <div class="movietitle"><a href="#">唐人街探案</a></div>
+                                    <div class="moviesorce">7.5</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="夏洛特烦恼">
+                                        <img src="../../image/xialuotefannao.jpg" / alt="夏洛特烦恼"></a>
+                                    <div class="movietitle"><a href="#">夏洛特烦恼</a></div>
+                                    <div class="moviesorce">7.5</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="地心营救">
+                                        <img src="../../image/dixinyingjiu.jpg" / alt="地心营救"></a>
+                                    <div class="movietitle"><a href="#">地心营救</a></div>
+                                    <div class="moviesorce">7.3</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="疯狂动物城">
+                                        <img src="../../image/fengkuangdongwucheng.jpg" / alt="寻龙诀"></a>
+                                    <div class="movietitle"><a href="#">疯狂动物城</a></div>
+                                    <div class="moviesorce">9.3</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="分歧者1异类觉醒">
+                                        <img src="../../image/fenqizhe1yileijuexing.jpg" / alt="分歧者1异类觉醒"></a>
+                                    <div class="movietitle"><a href="#">分歧者1异类觉醒</a></div>
+                                    <div class="moviesorce">6.4</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="复仇者联盟">
+                                        <img src="../../image/fuchouzhelianmeng.jpg" / alt="复仇者联盟"></a>
+                                    <div class="movietitle"><a href="#">复仇者联盟</a></div>
+                                    <div class="moviesorce">8.0</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="复仇者联盟2：奥创纪元">
+                                        <img src="../../image/fuchouzhelianmeng2aochuangjiyuan.jpg" / alt="复仇者联盟2：奥创纪元"></a>
+                                    <div class="movietitle"><a href="#">复仇者联盟2：奥创纪元</a></div>
+                                    <div class="moviesorce">7.1</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="功夫熊猫3">
+                                        <img src="../../image/gongfuxiongmao3.jpg" / alt="功夫熊猫3"></a>
+                                    <div class="movietitle"><a href="#">功夫熊猫3</a></div>
+                                    <div class="moviesorce">7.9</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="美人鱼">
+                                        <img src="../../image/meirenyu.jpg" / alt="美人鱼"></a>
+                                    <div class="movietitle"><a href="#">美人鱼</a></div>
+                                    <div class="moviesorce">7.1</div>
+                                </div></li>
+                            <li><div class="moviebox">
+                                    <a href="#" title="星球大战7原力觉醒">
+                                        <img src="../../image/xingqiudazhan7yuanlijuexing.jpg" / alt="星球大战7原力觉醒"></a>
+                                    <div class="movietitle"><a href="#">星球大战7原力觉醒</a></div>
+                                    <div class="moviesorce">7.2</div>
+                                </div></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+       
+        <div id="footer">
+            
+        </div>   
+    </div>
+
+ </body>
+</html>
 <div>
     <ul>
         @foreach (var m in ViewBag.MovieList)

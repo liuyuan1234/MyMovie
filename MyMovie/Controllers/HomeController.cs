@@ -76,6 +76,20 @@ namespace MyMovie.Controllers
             //list.Add(m1);
 
             ViewBag.MovieList = list;
+
+
+            HttpCookie aCookie = Request.Cookies["MyMovie_UserID"];
+            if (aCookie == null)
+            {
+                ViewBag.username = "";
+            }
+            else
+            {
+                int id = Convert.ToInt32(aCookie.Value);
+                UserDB udb = new UserDB();
+                string userName = udb.GetUserName(id);
+                ViewBag.userName = userName;
+            }
             return View();
         }
 
@@ -90,6 +104,19 @@ namespace MyMovie.Controllers
             MovieDetailModel m = db.GetDetail(id);
 
             ViewBag.movieModel = m;
+
+            HttpCookie aCookie = Request.Cookies["MyMovie_UserID"];
+            if (aCookie == null)
+            {
+                ViewBag.username = "";
+            }
+            else
+            {
+                int id1 = Convert.ToInt32(aCookie.Value);
+                UserDB idb = new UserDB();
+                string userName = idb.GetUserName(id1);
+                ViewBag.userName = userName;
+            }
 
             return View();
         }

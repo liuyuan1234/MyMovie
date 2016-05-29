@@ -118,6 +118,7 @@
     <Content Include="css\SignIn.css" />
     <Content Include="css\SignUp.css" />
     <Content Include="css\MovieDetail.css" />
+    <Content Include="css\MovieList.css" />
     <Content Include="Global.asax" />
     <Content Include="image\chaoti.jpg" />
     <Content Include="image\dashengguilai.jpg" />

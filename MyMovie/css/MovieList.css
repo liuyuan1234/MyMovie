@@ -103,55 +103,7 @@
     float:right;
     background-color:#f0f0f0;
     }
-.newmovie
-{
-    height:700px;
-    margin-left:40px;}
-
-.nmtitle
-{
-    position:relative;
-    
-}
-.nmtitle span
-{
-    position:absolute; top:20px;
-    font-size:25px;
-    color:#8e8e8e;}
-    .nmtitle a
-    {
-        position:absolute;top: 35px;right:50px;
-        font-size:10px;
-        color:#8e8e8e;}
-        .nmtitle a:hover
-        {
-            color:#ff5151;
-            }
-.hmtitle
-{   
-    margin-top:10px;
-    position:relative;
-    
-}
-.hmtitle span
-{   
-    position:absolute;top:30px;
-    font-size:25px;
-    color:#8e8e8e;}
-    .hmtitle a
-    {
-        position:absolute;top:35px;right:50px;
-        font-size:10px;
-        color:#8e8e8e;}
-        .hmtitle a:hover
-        {
-            color:#ff5151;
-            }
-.hotmovie
-{
-    margin-left:40px;
-    height:700px;}
-
+.movie{margin:30px 0 0 30px;}
 .moviebox
 {
     height:320px;
