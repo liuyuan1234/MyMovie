@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+     
+    <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+</head>
+<body>
+    <div>
+        <form action="/system/insert" method="post" enctype=""multipart/form-data">
+        <table>
+            <tr><td>标题</td><td><input name="Name" type="text" value="@ViewBag.Item.Name" /></td></tr>
+            <tr><td>类型</td><td><select name="TypeName">
+            <option value="donghua">动画</option>
+            <option value="kongbu">恐怖</option>
+            </select></td>
+           @* <input type="hidden" name="TypeName" value="@ViewBag.Item.Name" />*@
+            </tr>
+             <tr><td>演员</td><td><input name="Actors" type="text" value="@ViewBag.Item.Actors" /></td></tr> 
+             @if (ViewBag.Item.ID == 0)
+             {            
+             <tr><td>封面图片</td><td><input name="Img" type="file" /></td></tr>
+             <tr><td>电影</td><td><input name="movie" type="file" /></td></tr>
+             }
+            <tr><td>介绍</td><td><input name="Introduce" type="text" value="@ViewBag.Item.Introduce" /></td></tr>
+            
+            <tr><td>&nbsp;</td><td> <input type="submit" id="submit" value="提 交"/></td></tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>

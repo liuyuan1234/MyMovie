@@ -34,9 +34,13 @@ namespace MyMovie.Model
         /// </summary>
         public string Actors { get; set; }
 
+        public string CreateTime { get; set; }
+
+        public string typename { get; set; }
+
         public MovieDetailModel()
         {
-
+            ID = 0;
         }
 
         public MovieDetailModel(IDataReader reader)
@@ -51,11 +55,17 @@ namespace MyMovie.Model
                 columnName = reader.GetName(i).ToUpper(CultureInfo.InvariantCulture);
                 switch (columnName)
                 {
+                    case "CREATETIME":
+                        this.CreateTime = reader.GetDateTime(i).ToString("yyyy-MM-dd HH:mm");
+                        break;
                     case "ID":
                         this.ID = reader.GetInt32(i);
                         break;
                     case "NAME":
                         this.Name = reader.GetString(i);
+                        break;
+                    case "TYPENAME":
+                        this.typename = reader.GetString(i);
                         break;
                     case "MOVIEURL":
                         this.MovieUrl = reader.GetString(i);

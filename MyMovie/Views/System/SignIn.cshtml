@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "SignIn";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登陆</title>
+    <link href="../../css/SignIn.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+        <div class="logo">
+            <img src="../../image/logo2.png" / alt="加载失败" class="piclogo"/>
+                在线影院系统
+            </div>
+        <div id="bgp">
+            <img src="../../image/login.jpg" / alt="" class="pic"/>
+        </div>
+        <div class="signin_box">
+        <div class="text">用户名：</div>
+        <div class="input_box"><input  type="text" id="username" class="text_box"/></div>
+        <div class="text">密码：</div>
+        <div class="input_box"><input  type="password" id="password" class="text_box"/></div>
+        <div class="SIbutton"><button id="signinBtn">登录</button></div>
+        <script src="/js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("#signinBtn").on('click', function () {
+                $.ajax({
+                    url: '/system/SignInAjax'
+               , data: {
+                   userName: $("#username").val()
+               , password: $("#password").val()
+               }
+                , type: "POST"
+               , success: function (json) {
+                   //{result:1,error:""}
+                   if (json.result == 1) {
+                       //登陆成功，跳转到主页
+                       window.location.href = "/system/Index";
+                   } else {
+                       alert(json.error);
+                   }
+               }
+
+                });
+            });    
+</script>
+        </div>
+</body>
+</html>
+
+
