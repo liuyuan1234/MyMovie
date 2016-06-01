@@ -34,6 +34,8 @@ namespace MyMovie.Model
         /// </summary>
         public string Actors { get; set; }
 
+        public decimal Score { get; set; }
+
         public string CreateTime { get; set; }
 
         public string typename { get; set; }
@@ -78,6 +80,9 @@ namespace MyMovie.Model
                         break;
                     case "ACTORS":
                         this.Actors = reader.GetString(i);
+                        break;
+                    case "SCORE":
+                        this.Score = reader.GetDecimal(i);
                         break;
                 }
             }

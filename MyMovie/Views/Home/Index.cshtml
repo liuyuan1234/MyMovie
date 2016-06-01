@@ -29,7 +29,7 @@
                 else {
                     <div class="SignOut">
                     <span>@ViewBag.username</span>
-                    <a href="#" class="signout">退出</a>
+                    <a href="/home/LogOut" class="signout">退出</a>
                     </div>
                 }
             </div>
@@ -40,8 +40,8 @@
 
                 <div class="left" >
                     <ul>
-                        <li><a href="#" class="now">首页</a></li>
-                        <li><a href="#">喜剧</a></li>
+                        <li><a href="/Home/index" class="now">首页</a></li>
+                        <li><a href="/Home/MovieList?name=xiju" id="xiju">喜剧</a></li>
                         <li><a href="#">动作</a></li>
                         <li><a href="#">爱情</a></li>
                         <li><a href="#">武侠</a></li>

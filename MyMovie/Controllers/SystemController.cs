@@ -49,6 +49,7 @@ namespace MyMovie.Controllers
                 SystemDB udb = new SystemDB();
                 string userName = udb.GetUserName(uid);
                 ViewBag.userName = userName;
+                
             }
 
             SystemDB db = new SystemDB();
@@ -57,10 +58,12 @@ namespace MyMovie.Controllers
             if (id > 0)
             {
                 model = db.GetDetail(id);
+                ViewBag.Submit = "/system/update";
             }
             else
             {
                 model = new MovieDetailModel();
+                ViewBag.Submit = "/system/insert";
             }
             ViewBag.Item = model;
             return View();
@@ -104,6 +107,7 @@ namespace MyMovie.Controllers
             return Json(new { result = result });
         }
 
+        [HttpPost] 
         public ActionResult Insert(FormCollection form)
         {
             MovieDetailModel model = new MovieDetailModel();
@@ -112,19 +116,24 @@ namespace MyMovie.Controllers
             model.Actors = form["Actors"];
             model.Introduce = form["Introduce"];
 
-            HttpPostedFileBase imgFileBase = Request.Files["Img"];
-            string baseUrl = Server.MapPath("/");
-            string uploadPath = baseUrl + @"Images\Upload\img\";
-            string exten = Path.GetExtension(imgFileBase.FileName);
-            model.MovieImg=DateTime.Now.ToString("yyyyMMddHHmmss") + exten;            
-            imgFileBase.SaveAs(uploadPath + model.MovieImg);
 
-            HttpPostedFileBase movieFileBase = Request.Files["movie"];
-            uploadPath = baseUrl + @"Images\Upload\movies\";
-            exten = Path.GetExtension(movieFileBase.FileName);
-            model.MovieUrl = DateTime.Now.ToString("yyyyMMddHHmmss") + exten;
-            movieFileBase.SaveAs(uploadPath + model.MovieUrl);
+            model.MovieImg = String.Empty;
+            model.MovieUrl = String.Empty;
 
+            //HttpPostedFileBase imgFileBase = Request.Files["Img"];
+            //string baseUrl = Server.MapPath("/");
+            //string uploadPath = baseUrl + @"Upload\img\";
+            //string exten = Path.GetExtension(imgFileBase.FileName);
+            //model.MovieImg=DateTime.Now.ToString("yyyyMMddHHmmss") + exten;            
+            //imgFileBase.SaveAs(uploadPath + model.MovieImg);
+
+            //HttpPostedFileBase movieFileBase = Request.Files["movie"];
+            //uploadPath = baseUrl + @"Upload\movies\";
+            //exten = Path.GetExtension(movieFileBase.FileName);
+            //model.MovieUrl = DateTime.Now.ToString("yyyyMMddHHmmss") + exten;
+            //movieFileBase.SaveAs(uploadPath + model.MovieUrl);
+
+            // /Upload/img/+
             SystemDB db = new SystemDB();
             int result = db.AddOne(model);
 
@@ -141,11 +150,18 @@ namespace MyMovie.Controllers
             model.typename = form["TypeName"];
             model.Actors = form["Actors"];
             model.Introduce = form["Introduce"];
-                        
-            int result = db.AddOne(model);
+
+            int result = db.UpdOne(model);
 
             return new RedirectResult("/System/index");
 
+        }
+
+        public ActionResult LogOut()
+        {
+            HttpCookie aCookie = Response.Cookies["MyMovie_sysUserID"];
+            aCookie.Expires = DateTime.Now.AddDays(-1);
+            return new RedirectResult("/system/SignIn");
         }
     }
 }

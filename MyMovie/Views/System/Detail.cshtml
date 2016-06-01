@@ -8,17 +8,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Detail</title>
+    <script src="/js/jquery.js" type="text/javascript"></script>
 </head>
 <body>
     <div>
-        <form action="/system/insert" method="post" enctype=""multipart/form-data">
+
+        <form id="form" action="@ViewBag.Submit" method="post" enctype=""multipart/form-data">
+
         <table>
             <tr><td>标题</td><td><input name="Name" type="text" value="@ViewBag.Item.Name" /></td></tr>
             <tr><td>类型</td><td><select name="TypeName">
             <option value="donghua">动画</option>
             <option value="kongbu">恐怖</option>
-            </select></td>
-           @* <input type="hidden" name="TypeName" value="@ViewBag.Item.Name" />*@
+            </select></td>          
             </tr>
              <tr><td>演员</td><td><input name="Actors" type="text" value="@ViewBag.Item.Actors" /></td></tr> 
              @if (ViewBag.Item.ID == 0)
@@ -26,11 +28,18 @@
              <tr><td>封面图片</td><td><input name="Img" type="file" /></td></tr>
              <tr><td>电影</td><td><input name="movie" type="file" /></td></tr>
              }
+             else
+             {
+                 <input type="hidden" name="ID" value="@ViewBag.Item.ID" />
+             }
             <tr><td>介绍</td><td><input name="Introduce" type="text" value="@ViewBag.Item.Introduce" /></td></tr>
             
             <tr><td>&nbsp;</td><td> <input type="submit" id="submit" value="提 交"/></td></tr>
         </table>
         </form>
     </div>
+    <script type="text/javascript">
+       
+    </script>
 </body>
 </html>

@@ -68,5 +68,62 @@ namespace MyMovie.BLL
                 return new List<MovieDetailModel>();
             }
         }
+
+        /// <summary>
+        /// 最新的
+        /// </summary>
+        /// <returns></returns>
+        public List<MovieDetailModel> GetNewMovies()
+        {
+            string sql = "select top 8  m.id,d.typename as typename,m.name,m.[MovieImg]  from [Movies] m  inner join dbo.DicType d on m.typename=d.typeid  order by createTime desc;";
+            
+            List<MovieDetailModel> list = new List<MovieDetailModel>();
+            try
+            {
+                Database database = DatabaseFactory.CreateDatabase("MainConnection");
+                using (DbCommand cmd = database.GetSqlStringCommand(sql))
+                {
+                    using (IDataReader reader = database.ExecuteReader(cmd))
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new MovieDetailModel(reader));
+                        }
+                    }
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return new List<MovieDetailModel>();
+            }
+        }
+
+
+        public List<MovieDetailModel> GetPopularMovies()
+        {
+            string sql = "select top 8  m.id,d.typename as typename,m.name,m.[MovieImg]  from [Movies] m  inner join dbo.DicType d on m.typename=d.typeid  order by score desc;";
+
+            List<MovieDetailModel> list = new List<MovieDetailModel>();
+            try
+            {
+                Database database = DatabaseFactory.CreateDatabase("MainConnection");
+                using (DbCommand cmd = database.GetSqlStringCommand(sql))
+                {
+                    using (IDataReader reader = database.ExecuteReader(cmd))
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new MovieDetailModel(reader));
+                        }
+                    }
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return new List<MovieDetailModel>();
+            }
+        }
     }
 }

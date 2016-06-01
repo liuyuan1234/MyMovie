@@ -44,8 +44,8 @@
                 <div class="left" >
                     <ul>
                         <li><a href="#">首页</a></li>
-                        <li><a href="#">喜剧</a></li>
-                        <li><a href="#"class="now">动作</a></li>
+                        <li><a href="/Home/MovieList?name=xiju" id="xiju">喜剧</a></li>
+                        <li><a href="#">动作</a></li>
                         <li><a href="#">爱情</a></li>
                         <li><a href="#">武侠</a></li>
                         <li><a href="#">战争</a></li>
@@ -166,7 +166,10 @@
             
         </div>   
     </div>
-
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $("#@ViewBag.now").addClass('now');
+    </script>
  </body>
 </html>
 <div>

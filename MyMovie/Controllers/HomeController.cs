@@ -30,6 +30,14 @@ namespace MyMovie.Controllers
                 string userName = db.GetUserName(id);
                 ViewBag.userName = userName;
             }
+
+            MovieDB db = new MovieDB();
+            List<MovieDetailModel> newlist = db.GetNewMovies();
+            List<MovieDetailModel> popularlist = db.GetPopularMovies();
+
+            ViewBag.newlist = newlist;
+            ViewBag.popularlist = popularlist;
+
             return View();
         }
 
@@ -51,7 +59,12 @@ namespace MyMovie.Controllers
             return View();
         }
 
-
+        public ActionResult LogOut()
+        {
+            HttpCookie aCookie = Response.Cookies["MyMovie_UserID"];
+            aCookie.Expires = DateTime.Now.AddDays(-1);
+            return new RedirectResult("/home/index");
+        }
 
         /// <summary>
         /// 列表页
@@ -76,7 +89,7 @@ namespace MyMovie.Controllers
             //list.Add(m1);
 
             ViewBag.MovieList = list;
-
+            ViewBag.now = name;
 
             HttpCookie aCookie = Request.Cookies["MyMovie_UserID"];
             if (aCookie == null)

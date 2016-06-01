@@ -24,13 +24,19 @@
         <div class="text">请输入密码：</div>
         <div class="input_box"><input  type="password" id="password" class="text_box"/></div>
         <div class="text">请确认密码：</div>
-        <div class="input_box"><input  type="password" id="password" class="text_box"/></div>
+        <div class="input_box"><input  type="password" id="password1" class="text_box"/></div>
         <div class="SUbutton"><button id="signupBtn">注册</button></div>
             
         </div>
         <script src="/js/jquery.js" type="text/javascript"></script>
                 <script>
                     $("#signupBtn").on('click', function () {
+
+                        if ($("#password").val() != $("#password1").val()) {
+                            alert("两次输入的密码不一致！");
+                            return;
+                        }
+
                         $.ajax({
                             url: '/Home/SignUpAjax'
                        , data: {
