@@ -96,7 +96,7 @@ namespace MyMovie.BLL
             sql.AppendLine("VALUES");
             sql.AppendLine("(getdate()");
             sql.AppendLine(",'"+model.typename+"'");
-            sql.AppendLine(",'"+model.Name+"'>");
+            sql.AppendLine(",'"+model.Name+"'");
             sql.AppendLine(",'"+model.MovieUrl +"'");
             sql.AppendLine(",'"+model.MovieImg+"'");
             sql.AppendLine(",'"+model.Introduce+"'");
@@ -122,18 +122,10 @@ namespace MyMovie.BLL
         public int UpdOne(MovieDetailModel model)
         {
             StringBuilder sql = new StringBuilder();
-            sql.AppendLine("UPDATE [liuyuanMovie].[dbo].[Movies]");
-            sql.AppendLine("SET ");
-            sql.AppendLine(",[TypeName]");
-            sql.AppendLine(",[Name]");
-            sql.AppendLine(",[MovieUrl]");
-            sql.AppendLine(",[MovieImg]");
-            sql.AppendLine(",[Introduce]");
-            sql.AppendLine(",[Actors])");
-            sql.AppendLine("VALUES");
-            sql.AppendLine("(getdate()");
-            sql.AppendLine(",[TypeName] = '"+model.typename+"'");
-            sql.AppendLine(",[Name] ='"+model.Name+"'>");
+            sql.AppendLine("UPDATE [dbo].[Movies]");
+            sql.AppendLine("SET ");            
+            sql.AppendLine("[TypeName] = '"+model.typename+"'");
+            sql.AppendLine(",[Name] ='"+model.Name+"'");
             sql.AppendLine(",[MovieUrl] ='"+model.MovieUrl +"'");
             sql.AppendLine(",[MovieImg] ='"+model.MovieImg+"'");
             sql.AppendLine(",[Introduce] ='"+model.Introduce+"'");

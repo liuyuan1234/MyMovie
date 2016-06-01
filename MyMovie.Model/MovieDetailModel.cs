@@ -38,6 +38,8 @@ namespace MyMovie.Model
         /// </summary>
         public decimal Score { get; set; }
 
+        public decimal Score { get; set; }
+
         public string CreateTime { get; set; }
 
         public string typename { get; set; }
