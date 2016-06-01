@@ -120,6 +120,8 @@
     <Content Include="css\SignUp.css" />
     <Content Include="css\MovieDetail.css" />
     <Content Include="css\MovieList.css" />
+    <Content Include="css\Detail.css" />
+    <Content Include="css\SystemIndex.css" />
     <Content Include="Global.asax" />
     <Content Include="image\chaoti.jpg" />
     <Content Include="image\dashengguilai.jpg" />

@@ -4,12 +4,20 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
      
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Detail</title>
+    <title>影片管理</title>
+    <link href="/css/Detail.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <div id="header">
+        <div class="logo">
+           <img src="../../image/logo.png" / alt="加载失败" class="piclogo"/>
+                在线影院后台管理
+        </div>
+    </div>
     <div>
         <form action="/system/insert" method="post" enctype=""multipart/form-data">
         <table>
@@ -29,6 +37,7 @@
             <tr><td>介绍</td><td><input name="Introduce" type="text" value="@ViewBag.Item.Introduce" /></td></tr>
             
             <tr><td>&nbsp;</td><td> <input type="submit" id="submit" value="提 交"/></td></tr>
+            <tr><td>&nbsp;</td><td> <input type="submit" id="back" value="返 回"</td></tr>
         </table>
         </form>
     </div>
