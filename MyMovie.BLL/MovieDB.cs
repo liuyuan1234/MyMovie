@@ -11,9 +11,13 @@ namespace MyMovie.BLL
 {
     public class MovieDB
     {
+        //select top 8 * from [Movies] m order by id desc;
+
+        //select top 8 * from [Movies] m order by pingfen desc;
+
         public MovieDetailModel GetDetail(int id)
         {
-            string sql = "select m.id,d.typename,m.name,m.movieurl,m.introduce,m.actors";
+            string sql = "select m.id,d.typename,m.name,m.movieurl,m.introduce,m.actors,m.score";
             sql += " from [Movies] m";
             sql += " inner join dbo.DicType d on m.typename=d.typeid ";
             sql += " where id=" + id;

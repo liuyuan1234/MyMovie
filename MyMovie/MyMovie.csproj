@@ -124,8 +124,8 @@
     <Content Include="image\dashengguilai.jpg" />
     <Content Include="image\dixinyingjiu.jpg" />
     <Content Include="image\fengkuangdongwucheng.jpg" />
-    <Content Include="image\fenqizhe2juedingfanji.jpg" />
-    <Content Include="image\fenqizhe1yileijuexing.jpg" />
+    <Content Include="image\fenqizhe juedingfanji.jpg" />
+    <Content Include="image\fenqizhe yileijuexing.jpg" />
     <Content Include="image\fuchouzhelianmeng.jpg" />
     <Content Include="image\fuchouzhelianmeng2aochuangjiyuan.jpg" />
     <Content Include="image\gongfuxiongmao3.jpg" />
@@ -144,6 +144,9 @@
     <Content Include="image\yewen3.jpg" />
     <Content Include="image\zhuoyaoji.jpg" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\jwplayer.flash.swf" />
+    <Content Include="js\jwplayer.html5.js" />
+    <Content Include="js\jwplayer.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

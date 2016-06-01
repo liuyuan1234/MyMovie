@@ -13,7 +13,7 @@
     .bgp
 {
     position:absolute;
-    height:100%;
+    height:1000px;
     width:1366px;
     z-index:-1;
     }
@@ -77,9 +77,4 @@
            text-align:center;
            font-size:25px;
            }
-.playarea{margin:0 auto;
-          width:800px;
-          height:600px;
-          background-color:#000;
-          }
 .Introduce{margin:20px 0px 0px 100px;}          

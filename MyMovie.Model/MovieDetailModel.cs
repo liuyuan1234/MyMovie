@@ -33,6 +33,10 @@ namespace MyMovie.Model
         /// 演员
         /// </summary>
         public string Actors { get; set; }
+        /// <summary>
+        /// 评分
+        /// </summary>
+        public decimal Score { get; set; }
 
         public MovieDetailModel()
         {
@@ -68,6 +72,9 @@ namespace MyMovie.Model
                         break;
                     case "ACTORS":
                         this.Actors = reader.GetString(i);
+                        break;
+                    case "SCORE":
+                        this.Score = reader.GetDecimal(i);
                         break;
                 }
             }
