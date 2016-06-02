@@ -192,7 +192,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config\Conn.config" />
+    <Content Include="Config\Conn.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\System\SignIn.cshtml" />

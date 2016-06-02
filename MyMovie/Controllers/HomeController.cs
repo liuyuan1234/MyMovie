@@ -31,9 +31,9 @@ namespace MyMovie.Controllers
                 ViewBag.userName = userName;
             }
 
-            MovieDB db = new MovieDB();
-            List<MovieDetailModel> newlist = db.GetNewMovies();
-            List<MovieDetailModel> popularlist = db.GetPopularMovies();
+            MovieDB mdb = new MovieDB();
+            List<MovieDetailModel> newlist = mdb.GetNewMovies();
+            List<MovieDetailModel> popularlist = mdb.GetPopularMovies();
 
             ViewBag.newlist = newlist;
             ViewBag.popularlist = popularlist;

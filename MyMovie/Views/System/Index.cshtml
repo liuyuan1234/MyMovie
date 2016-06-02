@@ -15,33 +15,42 @@
                 在线影院后台管理
         </div>
     </div>
-    <div>
-    类型：<select id="type">
-    <option value='donghua'>动画</option>
-    <option value='kongbu'>恐怖</option>
-    <option value='dongzuo'>动作</option>
-    <option value='dianying'>电影</option>
-    </select>
-    <button id="searchBtn">查询</button>
-    <a href="/system/detail">去添加</a>
-        <table id="table">
-            <tr>
-                <td>
-                    名称
-                </td>
-                <td>
-                    类型
-                </td>
-                <td>
-                    添加时间
-                </td>
-                <td>
-                    操作
-                </td>
-            </tr>
-        </table>
-        <div id="page">
+    <div id="mainbody">
+        <div>
+        类型：<select id="type">
+                <option value="xiju">喜剧</option>
+                <option value="dongzuo">动作</option>
+                <option value="aiqing">爱情</option>
+                <option value="wuxia">武侠</option>
+                <option value="zhanzheng">战争</option>
+                <option value="kehuan">科幻</option>
+                <option value="kongbu">恐怖</option>
+                <option value="fanzui">犯罪</option>
+                <option value="jingsong">惊悚</option>
+                <option value="juqing">剧情</option>
+                <option value="qita">其他</option>
+        </select>
+        <button id="searchBtn">查询</button>
+        <a href="/system/detail">去添加</a>
+            <table id="table">
+                <tr>
+                    <td>
+                        名称
+                    </td>
+                    <td>
+                        类型
+                    </td>
+                    <td>
+                        添加时间
+                    </td>
+                    <td>
+                        操作
+                    </td>
+                </tr>
+            </table>
+            <div id="page">
       
+            </div>
         </div>
     </div>
     <script src="/js/jquery.js" type="text/javascript"></script>
