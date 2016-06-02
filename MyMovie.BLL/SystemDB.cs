@@ -92,7 +92,8 @@ namespace MyMovie.BLL
             sql.AppendLine(",[MovieUrl]");
             sql.AppendLine(",[MovieImg]");
             sql.AppendLine(",[Introduce]");
-            sql.AppendLine(",[Actors])");
+            sql.AppendLine(",[Actors]");
+            sql.AppendLine(",[Score])");
             sql.AppendLine("VALUES");
             sql.AppendLine("(getdate()");
             sql.AppendLine(",'"+model.typename+"'");
@@ -100,8 +101,8 @@ namespace MyMovie.BLL
             sql.AppendLine(",'"+model.MovieUrl +"'");
             sql.AppendLine(",'"+model.MovieImg+"'");
             sql.AppendLine(",'"+model.Introduce+"'");
-            sql.AppendLine(",'"+model.Actors+"')");
-
+            sql.AppendLine(",'"+model.Actors+"'");
+            sql.AppendLine(",'" + model.Score + "')");
             int redult = 0;
             try
             {
@@ -130,6 +131,7 @@ namespace MyMovie.BLL
             sql.AppendLine(",[MovieImg] ='"+model.MovieImg+"'");
             sql.AppendLine(",[Introduce] ='"+model.Introduce+"'");
             sql.AppendLine(",[Actors] ='"+model.Actors+"'");
+            sql.AppendLine(",[Score] ='" + model.Score + "'");
             sql.AppendLine("where id= "+model.ID);
 
             int redult = 0;

@@ -115,23 +115,24 @@ namespace MyMovie.Controllers
             model.typename = form["TypeName"];
             model.Actors = form["Actors"];
             model.Introduce = form["Introduce"];
+            model.Score = Convert.ToDecimal(form["Score"]);
 
 
-            model.MovieImg = String.Empty;
-            model.MovieUrl = String.Empty;
+            //model.MovieImg = String.Empty;
+            //model.MovieUrl = String.Empty;
 
-            //HttpPostedFileBase imgFileBase = Request.Files["Img"];
-            //string baseUrl = Server.MapPath("/");
-            //string uploadPath = baseUrl + @"Upload\img\";
-            //string exten = Path.GetExtension(imgFileBase.FileName);
-            //model.MovieImg=DateTime.Now.ToString("yyyyMMddHHmmss") + exten;            
-            //imgFileBase.SaveAs(uploadPath + model.MovieImg);
+            HttpPostedFileBase imgFileBase = Request.Files["Img"];
+            string baseUrl = Server.MapPath("/");
+            string uploadPath = baseUrl + @"Upload\img\";
+            string exten = Path.GetExtension(imgFileBase.FileName);
+            model.MovieImg = DateTime.Now.ToString("yyyyMMddHHmmss") + exten;
+            imgFileBase.SaveAs(uploadPath + model.MovieImg);
 
-            //HttpPostedFileBase movieFileBase = Request.Files["movie"];
-            //uploadPath = baseUrl + @"Upload\movies\";
-            //exten = Path.GetExtension(movieFileBase.FileName);
-            //model.MovieUrl = DateTime.Now.ToString("yyyyMMddHHmmss") + exten;
-            //movieFileBase.SaveAs(uploadPath + model.MovieUrl);
+            HttpPostedFileBase movieFileBase = Request.Files["movie"];
+            uploadPath = baseUrl + @"Upload\movies\";
+            exten = Path.GetExtension(movieFileBase.FileName);
+            model.MovieUrl = DateTime.Now.ToString("yyyyMMddHHmmss") + exten;
+            movieFileBase.SaveAs(uploadPath + model.MovieUrl);
 
             // /Upload/img/+
             SystemDB db = new SystemDB();
@@ -150,7 +151,7 @@ namespace MyMovie.Controllers
             model.typename = form["TypeName"];
             model.Actors = form["Actors"];
             model.Introduce = form["Introduce"];
-
+            model.Score = Convert.ToDecimal( form["Score"]);
             int result = db.UpdOne(model);
 
             return new RedirectResult("/System/index");

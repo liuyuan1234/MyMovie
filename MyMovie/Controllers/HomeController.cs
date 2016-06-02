@@ -121,7 +121,7 @@ namespace MyMovie.Controllers
             HttpCookie aCookie = Request.Cookies["MyMovie_UserID"];
             if (aCookie == null)
             {
-                ViewBag.username = "";
+                return new RedirectResult("/Home/SignIn");
             }
             else
             {

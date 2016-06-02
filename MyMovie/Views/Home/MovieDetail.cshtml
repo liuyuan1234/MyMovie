@@ -22,9 +22,6 @@
             <div class="logo">
                 <img src="../../image/logo.png" / alt="加载失败" class="piclogo"/>
                 在线影院系统
-                <div class="search"><input type="text" name="search" value="请输入影片名称" class="box"/>
-                <button type="button" class="button">搜索</button>
-                </div>
                 <div class="login">
                 @if (ViewBag.username == "")
                 {
@@ -34,7 +31,7 @@
                 else {
                     <div class="SignOut">
                     <span>@ViewBag.username</span>
-                    <a href="/Home/Index" class="signout">退出</a>    @*退出功能*@
+                    <a href="/Home/Index" class="signout">退出</a>   
                     </div>
                 }
                 </div>
@@ -44,7 +41,7 @@
         
         <div id="main">
              <div class="MovieName">
-                <h2>电影名称 @ViewBag.movieModel.Name </h2>
+                <h2>@ViewBag.movieModel.Name </h2>
             </div>
             <div class="playarea" id="video">
         
@@ -62,8 +59,8 @@
         thePlayer = jwplayer('video').setup({
             flashplayer: '/js/jwplayer.flash.swf',
             file: '/Upload/Video/02.mp4',
-            width: 800,
-            height: 600,
+            width: 1366,
+            height: 768,
             dock: false
         });
     });

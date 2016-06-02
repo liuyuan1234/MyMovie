@@ -46,7 +46,7 @@ namespace MyMovie.BLL
                 using (DbCommand cmd = database.GetSqlStringCommand(sql))
                 {
                     database.ExecuteNonQuery(cmd);
-                    id = 0;
+                    id = 1;
                 }
                 return id;
             }

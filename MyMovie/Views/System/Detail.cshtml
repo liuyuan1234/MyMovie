@@ -20,7 +20,7 @@
         </div>
     <div>
 
-        <form id="form" action="@ViewBag.Submit" method="post" enctype=""multipart/form-data">
+        <form id="form" action="@ViewBag.Submit" method="post" enctype="multipart/form-data">
 
         <table>
             <tr><td>标题</td><td><input name="Name" type="text" value="@ViewBag.Item.Name" /></td></tr>
@@ -49,6 +49,7 @@
                  <input type="hidden" name="ID" value="@ViewBag.Item.ID" />
              }
             <tr><td>介绍</td><td><input name="Introduce" type="text" value="@ViewBag.Item.Introduce" /></td></tr>
+            <tr><td>评分</td><td><input name="Score" type="text" value="@ViewBag.Item.Score" /></td></tr>
             
             <tr><td>&nbsp;</td><td> <input type="submit" id="submit" value="提 交"/></td></tr>
         </table>

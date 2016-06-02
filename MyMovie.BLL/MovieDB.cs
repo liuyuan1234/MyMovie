@@ -46,7 +46,7 @@ namespace MyMovie.BLL
         
         public List<MovieDetailModel> GetListByTypeName(string typename)
         {
-            string sql = "select m.id,d.typename as typename,m.name,m.[MovieImg]";
+            string sql = "select m.id,d.typename as typename,m.name,m.[MovieImg],m.Score";
             sql += " from [Movies] m";
             sql += " inner join dbo.DicType d on m.typename=d.typeid ";
             sql += " where m.typename='" + typename + "'";
@@ -61,7 +61,9 @@ namespace MyMovie.BLL
                     {
                         while (reader.Read())
                         {
-                            list.Add(new MovieDetailModel(reader));
+                            MovieDetailModel model = new MovieDetailModel(reader);
+                            model.MovieImg = "/Upload/img/" + model.MovieImg;
+                            list.Add(model);
                         }
                     }
                 }
@@ -79,7 +81,7 @@ namespace MyMovie.BLL
         /// <returns></returns>
         public List<MovieDetailModel> GetNewMovies()
         {
-            string sql = "select top 8  m.id,d.typename as typename,m.name,m.[MovieImg]  from [Movies] m  inner join dbo.DicType d on m.typename=d.typeid  order by createTime desc;";
+            string sql = "select top 8  m.id,d.typename as typename,m.name,m.[MovieImg],m.Score  from [Movies] m  inner join dbo.DicType d on m.typename=d.typeid  order by createTime desc;";
             
             List<MovieDetailModel> list = new List<MovieDetailModel>();
             try
@@ -91,7 +93,9 @@ namespace MyMovie.BLL
                     {
                         while (reader.Read())
                         {
-                            list.Add(new MovieDetailModel(reader));
+                            MovieDetailModel model = new MovieDetailModel(reader);
+                            model.MovieImg = "/Upload/img/" + model.MovieImg;
+                            list.Add(model);
                         }
                     }
                 }
@@ -106,7 +110,7 @@ namespace MyMovie.BLL
 
         public List<MovieDetailModel> GetPopularMovies()
         {
-            string sql = "select top 8  m.id,d.typename as typename,m.name,m.[MovieImg]  from [Movies] m  inner join dbo.DicType d on m.typename=d.typeid  order by score desc;";
+            string sql = "select top 8  m.id,d.typename as typename,m.name,m.[MovieImg],m.Score  from [Movies] m  inner join dbo.DicType d on m.typename=d.typeid  order by score desc;";
 
             List<MovieDetailModel> list = new List<MovieDetailModel>();
             try
@@ -118,7 +122,9 @@ namespace MyMovie.BLL
                     {
                         while (reader.Read())
                         {
-                            list.Add(new MovieDetailModel(reader));
+                            MovieDetailModel model = new MovieDetailModel(reader);
+                            model.MovieImg = "/Upload/img/" + model.MovieImg;
+                            list.Add(model);
                         }
                     }
                 }
