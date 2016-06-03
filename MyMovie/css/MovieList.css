@@ -46,16 +46,16 @@
 {
     color:#fff;
     margin-right:10px;}
-        .SignOut
+        .signout
     {
         color:#fff;
         }
-.signin:hover ,.signup:hover
+        .signout a{color:#fff;
+        margin-left:10px;}
+.signin:hover ,.signup:hover,.signout a:hover
 {
     color:#ff2d2d;
 }
-.signout{color:#fff;margin-left:10px;}
-.signout:hover{color:#ff2d2d}
 #mainbody
 {
     height:100%;

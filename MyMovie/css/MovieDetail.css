@@ -48,19 +48,19 @@
     font-size:15px}
 .login
 {
-    position:relative;top:-200px;right:-1200px;
+    position:absolute;top:50px;right:200px;
     font-size:15px;
     }
 .signin , .signup
 {
     color:#fff;
     margin-right:10px;}
-        .SignOut
+        .signout
     {
         color:#fff;
-        position:absolute;top:-40px;
         }
-.signin:hover ,.signup:hover
+        .signout a{color:#fff;margin-left:10px;}
+.signin:hover ,.signup:hover,.signout a:hover
 {
     color:#ff2d2d;
 }

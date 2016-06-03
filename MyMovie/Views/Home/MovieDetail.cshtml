@@ -22,20 +22,20 @@
             <div class="logo">
                 <img src="../../image/logo.png" / alt="加载失败" class="piclogo"/>
                 在线影院系统
-                <div class="login">
+            </div>
+             <div class="login">
                 @if (ViewBag.username == "")
                 {
                 <a href="/Home/SignIn" class="signin">登陆</a>
                 <a href="/Home/SignUp" class="signup">注册</a>
                     }
                 else {
-                    <div class="SignOut">
+                    <div class="signout">
                     <span>@ViewBag.username</span>
-                    <a href="/Home/Index" class="signout">退出</a>   
+                    <a href="/Home/Index">退出</a>   
                     </div>
                 }
                 </div>
-            </div>
         </div>
         
         
@@ -58,9 +58,9 @@
     $(function () {
         thePlayer = jwplayer('video').setup({
             flashplayer: '/js/jwplayer.flash.swf',
-            file: '/Upload/Video/02.mp4',
-            width: 1366,
-            height: 768,
+            file: '/Upload/Video/20160603201647.MP4',
+            width: 800,
+            height: 600,
             dock: false
         });
     });

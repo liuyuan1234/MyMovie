@@ -28,9 +28,9 @@
                 <a href="/Home/SignUp" class="signup">注册</a>
                     }
                 else {
-                    <div class="SignOut">
+                    <div class="signout">
                     <span>@ViewBag.username</span>
-                    <a href="Index.cshtml">退出</a>
+                    <a href="/Home/LogOut">退出</a>
                     </div>
                 }
             </div>
@@ -63,7 +63,7 @@
                             <li><div class="moviebox">
                                     <a href="/Home/MovieDetail?id=@m.ID" target="_blank" title="@m.Name">
                                         <img src="@m.MovieImg" / alt="@m.Name"/></a>
-                                    <div class="movietitle"><a href="#">@m.Name</a></div>
+                                    <div class="movietitle"><a href="/Home/MovieDetail?id=@m.ID">@m.Name</a></div>
                                     <div class="moviesorce">@m.Score</div>
                                 </div>
                             </li>
