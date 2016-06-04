@@ -10,21 +10,18 @@
     <meta name="viewport" content="width=device-width" />
     <title>Detail</title>
     <script src="/js/jquery.js" type="text/javascript"></script>
+    <link href="/css/Detail.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-        <div id="header">
-            <div class="logo">
-                <img src="../../image/logo.png" / alt="加载失败" class="piclogo"/>
-                在线影院系统后台管理
-            </div>
+        <div id="bgp">
+            <img src="../../image/login.jpg" / alt="" class="pic"/>
         </div>
-    <div>
-
-        <form id="form" action="@ViewBag.Submit" method="post" enctype="multipart/form-data">
-
-        <table>
-            <tr><td>标题</td><td><input name="Name" type="text" value="@ViewBag.Item.Name" /></td></tr>
-            <tr><td>类型</td><td><select name="TypeName">
+    <div class="mainbody">
+        <p>添加电影</p>
+        <form id="form" action="@ViewBag.Submit" method="post" enctype="multipart/form-data" style="padding:20px">
+        <table class="table">
+            <tr class="bg"><td>标题</td><td><input name="Name" type="text" value="@ViewBag.Item.Name" /></td></tr>
+            <tr class="bg"><td>类型</td><td><select name="TypeName">
             <option value="xiju">喜剧</option>
             <option value="dongzuo">动作</option>
             <option value="aiqing">爱情</option>
@@ -38,20 +35,20 @@
             <option value="qita">其他</option>
             </select></td>          
             </tr>
-             <tr><td>演员</td><td><input name="Actors" type="text" value="@ViewBag.Item.Actors" /></td></tr> 
+             <tr class="bg"><td>演员</td><td><input name="Actors" type="text" value="@ViewBag.Item.Actors" /></td></tr> 
              @if (ViewBag.Item.ID == 0)
              {            
-             <tr><td>封面图片</td><td><input name="Img" type="file" /></td></tr>
-             <tr><td>电影</td><td><input name="movie" type="file" /></td></tr>
+             <tr class="bg"><td>封面图片</td><td><input name="Img" type="file" /></td></tr>
+             <tr class="bg"><td>电影</td><td><input name="movie" type="file" /></td></tr>
              }
              else
              {
                  <input type="hidden" name="ID" value="@ViewBag.Item.ID" />
              }
-            <tr><td>介绍</td><td><input name="Introduce" type="text" value="@ViewBag.Item.Introduce" /></td></tr>
+            <tr class="bg"><td>介绍</td><td><input name="Introduce" type="text" value="@ViewBag.Item.Introduce"/></td></tr>
             <tr><td>评分</td><td><input name="Score" type="text" value="@ViewBag.Item.Score" /></td></tr>
             
-            <tr><td>&nbsp;</td><td> <input type="submit" id="submit" value="提 交"/></td></tr>
+            <tr class="bg"><td>&nbsp;</td><td> <input type="submit" id="submit" value="提 交"/ style="width:50px;"></td></tr>
         </table>
         </form>
     </div>

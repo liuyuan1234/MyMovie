@@ -124,6 +124,7 @@
     <Content Include="css\SystemIndex.css" />
     <Content Include="css\SystemSignIn.css" />
     <Content Include="Global.asax" />
+    <Content Include="image\BGP.jpg" />
     <Content Include="image\chaoti.jpg" />
     <Content Include="image\dashengguilai.jpg" />
     <Content Include="image\dixinyingjiu.jpg" />

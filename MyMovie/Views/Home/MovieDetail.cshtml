@@ -58,9 +58,9 @@
     $(function () {
         thePlayer = jwplayer('video').setup({
             flashplayer: '/js/jwplayer.flash.swf',
-            file: '/Upload/Video/20160603201647.MP4',
-            width: 800,
-            height: 600,
+            file: '/Upload/movies/@ViewBag.movieModel.MovieUrl',
+            width: 1280,
+            height: 720,
             dock: false
         });
     });

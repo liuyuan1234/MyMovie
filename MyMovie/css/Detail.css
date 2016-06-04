@@ -1,0 +1,30 @@
+﻿*
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+}
+
+
+#bgp
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    }
+    .pic
+    {
+        height:100%;
+        width:100%;
+    }
+.bg{margin-bottom:20px;}
+
+.mainbody{width:400px;height:350px;background-color:rgba(255,255,255,0.5);border:2px solid #ccc;
+          position:absolute;left:50%;top:50%;margin-left:-200px;margin-top:-175px;}
+.mainbody p{font-size:20px;font-family:黑体;text-align:center;font-weight:bold;margin-top:10px;}
+
+
+.table{font-size:15px;table-layout:fixed;empty-cells:show;border-collapse:collapse;
+       width:200px;height:300px;font-size:16px;font-family:黑体;}
